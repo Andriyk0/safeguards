@@ -1,0 +1,56 @@
+<section class="contact" id="contact">
+  <p class="contact__title">Contact <span style="color: #111;">Us</span></p>
+  <div class="contact__goToTop" (click)="goToTop()">
+    <img class="contact__goToTop_img" src="./assets/image/topVector.svg" alt="">
+  </div>
+  <form class="contact__form" [formGroup]="createContactForm" (ngSubmit)="contact()">
+    <div class="register_row" >
+      <mat-form-field style="width: 100%;" class="example-full-width" appearance="outline">
+        <mat-label>Full Name</mat-label>
+        <input type="text" formControlName="fullName" matInput >
+        <mat-error *ngIf="createContactForm.controls['fullName'].hasError('required')">
+          Full Name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="register_row" >
+      <mat-form-field style="width: 100%;" class="example-full-width" appearance="outline">
+        <mat-label>Company Name</mat-label>
+        <input type="text" formControlName="company" matInput >
+        <mat-error *ngIf="createContactForm.controls['company'].hasError('required')">
+          Company Name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="register_row">
+      <mat-form-field style="width: 100%;" class="example-full-width" appearance="outline">
+        <mat-label>Phone Number</mat-label>
+        <input class="callback_name" formControlName="phone" matInput prefix="+38" [mask]="'(000) 00-00-000'"  value="">
+        <mat-error *ngIf="createContactForm.controls['phone'].hasError('required')">
+          Phone Number is <strong>invalid</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="register_row">
+      <mat-form-field style="width: 100%" class="example-full-width" appearance="outline">
+        <mat-label>Е-mail</mat-label>
+        <input formControlName="email" matInput placeholder="example@domain.com">
+        <mat-error *ngIf="createContactForm.controls['email'].hasError('required')">
+          E-mail is <strong>invalid</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="register_row" >
+      <mat-form-field style="width: 100%;"class="example-full-width" appearance="outline">
+        <mat-label>Write Us Message</mat-label>
+        <textarea type="text" formControlName="message" matInput ></textarea>
+        <mat-error *ngIf="createContactForm.controls['message'].hasError('required')">
+          Massage is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="register_row">
+      <button class="contact__button" [disabled]="createContactForm.invalid" type="submit">Send Message</button>
+    </div>
+  </form>
+</section>

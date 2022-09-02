@@ -1,0 +1,461 @@
+@import '../../../styles/mixin.scss';
+
+.header {
+  width: 100%;
+  background-color: #ffbc00;
+
+  &__container {
+    width: 1920px;
+    height: 876px;
+    padding: 48px 11px 55px 295px;
+    margin: 0 auto;
+
+    @include onDesctop {
+      width: 1270px;
+      height: 608px;
+      padding: 48px 11px 55px 100px;
+    }
+
+    @include onTablet {
+      width: 768px;
+      height: 470px;
+      padding: 30px 11px 30px 30px;
+    }
+
+    @include onPhone {
+      width: 375px;
+      height: 812px;
+      padding: 41px 28px;
+      overflow: hidden;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    @include onPhone {
+      flex-direction: column;
+    }
+  }
+
+  &__text_box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    width: 437px;
+    height: 176px;
+    font-family: 'Anton', sans-serif;
+    font-size: 68px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #000;
+    margin-top: 178px;
+    margin-bottom: 33px;
+
+    @include onDesctop {
+      width: 318px;
+      height: 120px;
+      font-size: 48px;
+      margin-top: 100px;
+      margin-bottom: 20px;
+    }
+
+    @include onTablet {
+      width: 250px;
+      height: 100px;
+      font-size: 38px;
+      margin-top: 50px;
+      margin-bottom: 18px;
+    }
+
+    @include onPhone {
+      width: 270px;
+      height: 109px;
+      margin-top: 65px;
+      font-size: 42px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__description {
+    width: 560px;
+    height: 68px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: #000;
+    margin-left: 81px;
+    margin-bottom: 63px;
+
+    @include onDesctop {
+      width: 380px;
+      height: 44px;
+      font-size: 13px;
+      margin-left: 50px;
+      margin-bottom: 35px;
+    }
+
+    @include onTablet {
+      width: 266px;
+      height: 44px;
+      margin-left: 29px;
+    }
+
+    @include onPhone {
+      margin-left: 0;
+      margin-bottom: 30px;
+      font-size: 14px;
+      line-height: 160%;
+      width: 300px;
+      height: 66px;
+    }
+  }
+
+  &__button {
+    width: 176px;
+    height: 65px;
+    background-color: #fff;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #111;
+    border: none;
+    cursor: pointer;
+    margin-left: 81px;
+    margin-bottom: 65px;
+    transition: 0.3s;
+
+    &:hover {
+      box-shadow: 0px 0px 13px rgb(0 0 0);
+    }
+
+    @include onDesctop {
+      width: 140px;
+      height: 47px;
+      font-size: 16px;
+      margin-left: 50px;
+      margin-bottom: 45px;
+    }
+
+    @include onTablet {
+      width: 130px;
+      height: 38px;
+      margin-left: 30px;
+      margin-bottom: 30px;
+    }
+
+    @include onPhone {
+      width: 154px;
+      height: 55px;
+      margin-left: 0;
+      font-size: 14px;
+      margin-bottom: 48px;
+    }
+  }
+
+  &__arrow_button {
+    border: none;
+    background-color: transparent;
+    margin-left: 81px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000;
+    width: 30px;
+    height: 100px;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @include onDesctop {
+      margin-left: 50px;
+      font-size: 15px;
+      line-height: 15px;
+      width: 25px;
+      height: 79px;
+    }
+
+    @include onTablet {
+      margin-left: 30px;
+      font-size: 13px;
+    }
+
+    @include onPhone {
+      display: none;
+    }
+  }
+
+  &__arrow_img {
+    @include onDesctop {
+      width: 13px;
+    }
+
+    @include onTablet {
+      width: 10px;
+    }
+  }
+
+  &__vertical_text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-bottom: 8px;
+  }
+
+  &__image_box {
+    width: 826px;
+    height: 647px;
+    margin-top: 76px;
+
+    @include onDesctop {
+      width: 550px;
+      height: 519px;
+      margin-top: 0px;
+    }
+
+    @include onTablet {
+      width: 361px;
+      height: 300px;
+    }
+
+    @include onPhone {
+      width: 401px;
+      height: 313px;
+      margin-top: 0;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+
+    &:hover {
+      transform: rotateY(20deg);
+    }
+  }
+}
+
+.nav {
+  padding: 0 341px 0 81px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include onDesctop {
+    padding: 0px 50px 0 39px;
+  }
+
+  @include onTablet {
+    padding: 0 30px;
+  }
+
+  @include onPhone {
+    padding: 0;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover > .nav__wrapper > .nav__font_face {
+      transform: rotateY(-180deg);
+    }
+
+    &:hover > .nav__wrapper > .nav__back_face {
+      transform: rotateY(0deg);
+    }
+  }
+
+  &__wrapper {
+    width: 35px;
+    height: 39px;
+    margin-right: 11px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+
+    @include onTablet {
+      width: 30px;
+      height: 30px;
+      margin-right: 9px;
+    }
+  }
+
+  &__card {
+    position: absolute;
+    transform: translateY(0deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+  }
+
+  &__card > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__back_face {
+    transform: rotateY(180deg);
+  }
+
+  &__logo_name {
+    width: 136px;
+    height: 29px;
+    margin-right: 3px;
+
+    @include onTablet {
+      width: 113px;
+      height: 24px;
+    }
+  }
+
+  &__logo_r {
+    margin-top: -20px;
+  }
+
+  &__link_box {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+
+    @include onTablet {
+      display: none;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #111;
+    margin-right: 25px;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+
+    &:hover {
+      border: 1px solid;
+    }
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  &__link_active {
+    background-color: #fff;
+
+    &:hover {
+      border: 1px solid transparent;
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    @include onTablet {
+      display: block;
+      width: 40px;
+      height: 30px;
+    }
+
+    @include onPhone {
+      width: 30px;
+      height: 19px;
+    }
+  }
+
+  &__menu_img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  background-color: #ffbc00;
+  padding: 40px 30px;
+  width: 100vw;
+  height: 100vh;
+  transition: 0.5s;
+  overflow: scroll;
+
+  &:target {
+    transform: translateX(0);
+    z-index: 100;
+  }
+
+  @include onTablet {
+    display: block;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 56px;
+  }
+
+  &__close_img {
+    width: 30px;
+    height: 30px;
+  }
+
+  &__link_box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+
+  &__link {
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 100%;
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 35px;
+
+    @include onPhone {
+      width: 205px;
+      font-size: 24px;
+      margin-bottom: 28px;
+    }
+  }
+
+  &__services {
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: #000;
+    opacity: 0.5;
+    margin-bottom: 28px;
+  }
+
+  &__services_box {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,130 @@
+<header class="header">
+  <div class="header__container">
+    <nav class="nav">
+      <div class="nav__logo logo">
+        <div class="nav__wrapper">
+          <div class="nav__card nav__font_face">
+            <img src="./assets/image/logoblack.svg" alt="">
+          </div>
+          <div class="nav__card nav__back_face">
+            <img src="./assets/image/logo.svg" alt="">
+          </div>
+        </div>
+        <img class="nav__logo_name" src="./assets/image/safeguard.svg" alt="">
+        <img class="nav__logo_r" src="./assets/image/®.svg" alt="">
+      </div>
+      <div class="nav__link_box">
+        <a
+          href="#home"
+          (click)="writeRouterPath('Home')"
+          [className]="routerPath=='Home' ? 'nav__link nav__link_active' : 'nav__link'"
+        >
+          Home
+        </a>
+        <a
+          href="#about_us"
+          (click)="writeRouterPath('About')"
+          [className]="routerPath=='About' ? 'nav__link nav__link_active' : 'nav__link'"
+        >
+          About Us
+        </a>
+        <a
+          href="#what_we_do"
+          (click)="writeRouterPath('WhatWeDo')"
+          [className]="routerPath=='WhatWeDo' ? 'nav__link nav__link_active' : 'nav__link'"
+        >
+          What We Do
+        </a>
+        <a
+          href="#contact_us"
+          (click)="writeRouterPath('Contact')"
+          [className]="routerPath=='Contact' ? 'nav__link nav__link_active' : 'nav__link'"
+        >
+          Contact Us
+        </a>
+      </div>
+      <div class="nav__menu">
+        <a href="#menu">
+          <img class="nav__menu_img" src="./assets/image/menu.svg" alt="">
+        </a>
+      </div>
+    </nav>
+    <div class="header__bottom">
+      <div class="header__text_box">
+        <h1 class="header__title">Never Caught Off-Guard Again</h1>
+        <p class="header__description">We are specialist in protecting your assets and reputation to make sure you operate risk-free and focus on your core business.</p>
+        <button class="header__button">Learn More</button>
+        <a href="#contact" class="header__arrow_button">
+          <span class="header__vertical_text">Scroll</span>
+          <img class="header__arrow_img" src="./assets/image/Arrowbottom.svg" alt="">
+        </a>
+      </div>
+      <div class="header__image_box">
+        <img class="header__image" src="./assets/image/spacehelmetf5.svg" alt="">
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu">
+  <div class="menu__header">
+    <div class="nav__logo logo">
+      <div class="nav__wrapper">
+        <div class="nav__card nav__font_face">
+          <img src="./assets/image/logoblack.svg" alt="">
+        </div>
+        <div class="nav__card nav__back_face">
+          <img src="./assets/image/logo.svg" alt="">
+        </div>
+      </div>
+      <img class="nav__logo_name" src="./assets/image/safeguard.svg" alt="">
+      <img class="nav__logo_r" src="./assets/image/®.svg" alt="">
+    </div>
+    <a href="#">
+      <img class="menu__close_img" src="./assets/image/close.png" alt="">
+    </a>
+  </div>
+  <div class="menu__link_box">
+    <a
+    href="#home"
+    (click)="writeRouterPath('Home')"
+    class="menu__link"
+  >
+    Home
+  </a>
+
+  <a
+  href="#what_we_do"
+  (click)="writeRouterPath('WhatWeDo')"
+  class="menu__link"
+  >
+    What we do
+  </a>
+
+  <a
+    href="#about_us"
+    (click)="writeRouterPath('About')"
+    class="menu__link"
+  >
+    About us
+  </a>
+
+  <a class="menu__link" href="#">Our history</a>
+
+  <a
+    href="#contact_us"
+    (click)="writeRouterPath('Contact')"
+    class="menu__link"
+  >
+    Contact us
+  </a>
+  </div>
+
+  <p class="menu__services">Services</p>
+  <div class="menu__services_box">
+    <a class="menu__link" href="#">Training and Implementation</a>
+    <a class="menu__link" href="#">Cyber Consultants</a>
+    <a class="menu__link" href="#">Consultancy and brand protection</a>
+    <a class="menu__link" href="#">Software</a>
+  </div>
+</div>
