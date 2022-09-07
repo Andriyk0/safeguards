@@ -1,5 +1,5 @@
 @mixin onDesctop {
-  @media (max-width: 1439px) {
+  @media (max-width: 1600px) {
     @content;
   }
 }

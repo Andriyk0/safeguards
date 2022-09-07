@@ -33,6 +33,7 @@ export class ContactUsComponent implements OnInit {
 
   contact():void{
     this.createContactForm.reset();
+    this.goToTop();
   }
 
   goToTop():void {
